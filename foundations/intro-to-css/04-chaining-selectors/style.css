@@ -1,1 +1,19 @@
 /* Add CSS Styling */
+
+.avatar {
+    border: none;
+    width: 200px
+}
+
+.original {
+    border: none;
+    width: 300px;
+}
+
+.portioned {
+    aspect-ratio: 1/1;
+}
+
+.distorted {
+    aspect-ratio: 1/2;
+}
