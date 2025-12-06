@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* layout: icon on left, content column on right */
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: flex-start;
 }
 
 .icon {
@@ -33,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* prevent icon from shrinking */
 }
 
 .close-button {
@@ -66,4 +72,35 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* ------------------ new content layout ------------------ */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  /* do not use space-between; we'll center title with auto margins */
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  flex: 1 1 auto; /* take available header space */
+  text-align: left; /* left-justify the prompt */
+}
+
+.text {
+  margin: 12px 0 16px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }

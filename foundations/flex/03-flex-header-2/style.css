@@ -12,6 +12,13 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* keep everything on a single row and add a small gap */
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 8px 16px;
 }
 
 .profile-image {
@@ -27,6 +34,18 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  /* keep logo in normal flow on the left (no absolute positioning) */
+  margin-left: 8px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-right: 16px;
+  margin: 0; /* reset default ul margin so layout doesn't shift */
+  padding: 0; /* reset default ul padding so items align */
 }
 
 button {
@@ -37,6 +56,17 @@ button {
   padding: 8px 24px;
 }
 
+/* make notifications sit to the right of the links */
+.notifications {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.profile-image {
+  margin-left: 12px;
+}
+
 a {
   /* this removes the line under our links */
   text-decoration: none;
@@ -45,4 +75,6 @@ a {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
